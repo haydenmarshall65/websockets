@@ -1,9 +1,14 @@
+
+
 Deno.serve({
-    port: 80,
+    port: 8080,
   handler: async (request) => {
+    console.log('starting on port 8080')
     // If the request is a websocket upgrade,
     // we need to use the Deno.upgradeWebSocket helper
+    console.log(request.url);
     if (request.headers.get("upgrade") === "websocket") {
+      console.log('im here');
       const { socket, response } = Deno.upgradeWebSocket(request);
 
       socket.onopen = () => {

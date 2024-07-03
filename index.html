@@ -3,7 +3,7 @@
 <p>Sends a ping every five seconds</p>
 <div id="output"></div>
 <script>
-  const wsUri = "ws://127.0.0.1/";
+  const wsUri = "ws://localhost:8080/ws";
   const output = document.querySelector("#output");
   const websocket = new WebSocket(wsUri);
   let pingInterval;
