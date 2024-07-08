@@ -1,5 +1,5 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net=0.0.0.0:8080 --allow-read=./index.html main.js"
+    "dev": "deno run --watch --allow-net=0.0.0.0:8080 --allow-write=./wstest.db --allow-read=./index.html,wstest.db,wstest.db-journal main.js"
   }
 }
